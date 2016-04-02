@@ -140,12 +140,20 @@ WEBSOCKET_URL = '/ws/'
 WS4REDIS_EXPIRE = 7200
 WS4REDIS_PREFIX = 'ws'
 WSGI_APPLICATION = 'ws4redis.django_runserver.application'
-
-
-GOOGLE_ACCESS_TOKEN = ''
-UBER_ACCESS_TOKEN = ''
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+BROKER_URL = 'redis://localhost:6379/0'
 REDIS_HOST = 'localhost'
 UBER_API_URL = 'https://api.uber.com/v1/'
 GOOGLE_API_URL = 'https://maps.googleapis.com/maps/api/'
+
+# Override variables in local_settings
+GOOGLE_ACCESS_TOKEN = None
+UBER_ACCESS_TOKEN = None
+
+EMAIL_HOST_USER = None
+EMAIL_HOST_PASSWORD = None
+
 
 from bookmycab.local_settings import *
